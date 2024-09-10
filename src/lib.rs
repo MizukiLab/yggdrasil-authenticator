@@ -27,3 +27,4 @@ mod client {
 
 // Re-exports all models and client modules for easier access from the top level.
 pub use model::*;
+pub use client::*;
