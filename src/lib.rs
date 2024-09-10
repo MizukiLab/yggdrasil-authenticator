@@ -1,5 +1,5 @@
 // JSON models for networking.
-mod model {
+pub mod model {
     // Agent JSON model.
     pub mod auth_agent; // Defines the JSON model for authentication agents.
 
@@ -21,7 +21,7 @@ mod model {
     pub use self::response::*; // Re-exports response models for easier access.
 }
 
-mod client {
+pub mod client {
     pub mod client; // Contains the client implementation for interacting with the authentication system.
 }
 
