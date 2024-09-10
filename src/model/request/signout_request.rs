@@ -7,10 +7,10 @@ use serde::Serialize;
 #[derive(Serialize)]
 pub struct SignoutRequest {
     /// The username of the user who is signing out.
-    username: String,
+    pub username: String,
 
     /// The password of the user who is signing out.
-    password: String,
+    pub password: String,
 }
 
 impl SignoutRequest {

@@ -6,10 +6,10 @@ use serde::{Deserialize, Serialize};
 #[derive(Serialize, Deserialize)]
 pub struct AuthProfile {
     /// The name of the authentication profile.
-    name: String,
+    pub name: String,
 
     /// The unique identifier for the authentication profile.
-    id: String,
+    pub id: String,
 }
 
 impl AuthProfile {

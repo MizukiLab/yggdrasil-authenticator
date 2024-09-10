@@ -8,11 +8,11 @@ use serde::Serialize;
 pub struct InvalidateRequest {
     /// The access token to invalidate.
     #[serde(rename = "accessToken")]
-    access_token: String,
+    pub access_token: String,
 
     /// The client token.
     #[serde(rename = "clientToken")]
-    client_token: String,
+    pub client_token: String,
 }
 
 impl InvalidateRequest {

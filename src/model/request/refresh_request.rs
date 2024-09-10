@@ -9,19 +9,19 @@ use serde::Serialize;
 pub struct RefreshRequest {
     /// The access token to refresh.
     #[serde(rename = "accessToken")]
-    access_token: String,
+    pub access_token: String,
 
     /// The client token associated with the user.
     #[serde(rename = "clientToken")]
-    client_token: String,
+    pub client_token: String,
 
     /// Whether to request user information in the response.
     #[serde(rename = "requestUser")]
-    request_user: bool,
+    pub request_user: bool,
 
     /// The selected profile to refresh, if any. This field is not serialized if it is `None`.
     #[serde(rename = "selectedProfile", skip_serializing_if = "Option::is_none")]
-    selected_profile: Option<AuthProfile>,
+    pub selected_profile: Option<AuthProfile>,
 }
 
 impl RefreshRequest {

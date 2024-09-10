@@ -10,16 +10,16 @@ use serde::Deserialize;
 pub struct RefreshResponse {
     /// The new access token assigned after the refresh.
     #[serde(rename = "accessToken")]
-    access_token: String,
+    pub access_token: String,
 
     /// The client token used for authentication.
     #[serde(rename = "clientToken")]
-    client_token: String,
+    pub client_token: String,
 
     /// The profile selected by the user, if any.
     #[serde(rename = "selectedProfile")]
-    selected_profile: Option<AuthProfile>,
+    pub selected_profile: Option<AuthProfile>,
 
     /// Optional user information for the authenticated user, if available.
-    user: Option<AuthUser>,
+    pub user: Option<AuthUser>,
 }

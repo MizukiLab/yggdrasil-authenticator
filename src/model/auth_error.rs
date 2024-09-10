@@ -7,14 +7,14 @@ use serde::Deserialize;
 #[derive(Deserialize, Debug, Clone)]
 pub struct AuthError {
     /// A general identifier for the error.
-    error: String,
+    pub error: String,
 
     /// A detailed message explaining the error.
     #[serde(rename = "errorMessage")]
-    error_message: String,
+    pub error_message: String,
 
     /// The cause of the error.
-    cause: String,
+    pub cause: String,
 }
 
 impl AuthError {

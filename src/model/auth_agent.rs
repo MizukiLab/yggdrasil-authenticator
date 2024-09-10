@@ -7,10 +7,10 @@ use serde::Serialize;
 #[derive(Serialize)]
 pub struct AuthAgent {
     /// The name of the authentication agent.
-    name: String,
+    pub name: String,
 
     /// The version of the authentication agent.
-    version: i32,
+    pub version: i32,
 }
 
 impl AuthAgent {

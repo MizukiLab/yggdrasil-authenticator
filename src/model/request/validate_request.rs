@@ -7,7 +7,7 @@ use serde::Serialize;
 pub struct ValidateRequest {
     /// The access token to validate.
     #[serde(rename = "accessToken")]
-    access_token: String,
+    pub access_token: String,
 }
 
 impl ValidateRequest {

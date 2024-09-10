@@ -6,10 +6,10 @@ use serde::Deserialize;
 #[derive(Deserialize)]
 pub struct AuthUserProperty {
     /// The name of the user property.
-    name: String,
+    pub name: String,
 
     /// The value of the user property.
-    value: String,
+    pub value: String,
 }
 
 /// Represents a user in Yggdrasil's authentication system.

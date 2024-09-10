@@ -10,21 +10,21 @@ use serde::Deserialize;
 pub struct AuthResponse {
     /// The access token assigned to the authenticated user.
     #[serde(rename = "accessToken")]
-    access_token: String,
+    pub access_token: String,
 
     /// The client token used for authenticating the user.
     #[serde(rename = "clientToken")]
-    client_token: String,
+    pub client_token: String,
 
     /// A list of available profiles for the authenticated user.
     #[serde(rename = "availableProfiles")]
-    available_profiles: Vec<AuthProfile>,
+    pub available_profiles: Vec<AuthProfile>,
 
     /// The profile selected by the user, if any.
     #[serde(rename = "selectedProfile")]
-    selected_profile: Option<AuthProfile>,
+    pub selected_profile: Option<AuthProfile>,
 
     /// Optional user information for the authenticated user.
     #[serde(rename = "user")]
-    user: Option<AuthUser>,
+    pub user: Option<AuthUser>,
 }

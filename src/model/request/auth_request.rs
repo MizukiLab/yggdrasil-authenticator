@@ -5,21 +5,21 @@ use serde::Serialize;
 #[derive(Serialize)]
 pub struct AuthRequest {
     /// The agent for which the request is being made (e.g., Minecraft).
-    agent: AuthAgent,
+    pub agent: AuthAgent,
 
     /// The username of the user.
-    username: String,
+    pub username: String,
 
     /// The password of the user.
-    password: String,
+    pub password: String,
 
     /// The client token used for authentication.
     #[serde(rename = "clientToken")]
-    client_token: String,
+    pub client_token: String,
 
     /// Whether to request user information in the response.
     #[serde(rename = "requestUser")]
-    request_user: bool,
+    pub request_user: bool,
 }
 
 impl AuthRequest {
