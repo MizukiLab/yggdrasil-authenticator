@@ -1,8 +1,12 @@
 [package]
 name = "yggdrasil-authenticator"
-authors = ["Rabbit0w0"]
-license = "Apache-2.0"
 version = "0.1.0"
+authors = ["Rabbit0w0 <rabbit0w0@outlook.com>"]
+license = "Apache-2.0"
+homepage = "https://github.com/MizukiLab/yggdrasil-authenticator"
+repository = "https://github.com/MizukiLab/yggdrasil-authenticator"
+documentation = "https://docs.rs/yggdrasil-authenticator"
+description = "Rust library for authenticating using Yggdrasil API."
 edition = "2021"
 
 [dependencies]

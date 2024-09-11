@@ -12,6 +12,15 @@ Implemented Standard: [authlib-injector](https://github.com/yushijinhun/authlib-
 - **JSON Models**: Structs for serializing/deserializing request and response data, including agents, profiles, users, and errors.
 - **Error Handling**: Custom error types for handling authentication failures.
 
+## Usage
+
+Add the library to your `Cargo.toml`:
+
+```toml
+[dependencies]
+yggdrasil-authenticator = "0.1.0"
+```
+
 ## Sample Code
 
 ```rust
