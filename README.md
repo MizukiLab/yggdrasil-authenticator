@@ -15,8 +15,9 @@ Implemented Standard: [authlib-injector](https://github.com/yushijinhun/authlib-
 ## Sample Code
 
 ```rust
-use yggdrasil_authenticator::client::AuthClient;
-use yggdrasil_authenticator::model::{AuthAgent, AuthProfile};
+
+use yggdrasil_authenticator::auth_agent::AuthAgent;
+use yggdrasil_authenticator::client::client::AuthClient;
 use std::error::Error;
 
 #[tokio::main]
