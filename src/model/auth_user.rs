@@ -18,8 +18,8 @@ pub struct AuthUserProperty {
 #[derive(Deserialize)]
 pub struct AuthUser {
     /// The unique identifier of the user.
-    id: String,
+    pub id: String,
 
     /// A list of properties associated with the user.
-    properties: Vec<AuthUserProperty>,
+    pub properties: Vec<AuthUserProperty>,
 }

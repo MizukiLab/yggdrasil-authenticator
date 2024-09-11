@@ -25,6 +25,5 @@ pub mod client {
     pub mod client; // Contains the client implementation for interacting with the authentication system.
 }
 
-// Re-exports all models and client modules for easier access from the top level.
+// Re-exports all models for easier access from the top level.
 pub use model::*;
-pub use client::*;

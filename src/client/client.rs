@@ -225,14 +225,16 @@ async fn send_post_request(
     }
 
     if status != reqwest::StatusCode::OK {
-        // If response is not JSON, throw an error
-        if !response.starts_with("{") {
-            return Err(format!("server error: {}", response).into());
+        // Handle this error if possible
+        let error: Result<AuthError, serde_json::Error> = serde_json::from_str(&response);
+        return match error {
+            Ok(auth_error) => {
+                Err(auth_error.into())
+            }
+            Err(_error) => {
+                Err(format!("server status: {}, response: {}", status, response).into())
+            }
         }
-
-        // Or parse the error response
-        let auth_error: AuthError = serde_json::from_str(&response)?;
-        return Err(auth_error.into());
     }
 
     Ok(Some(response))
